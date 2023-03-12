@@ -1,7 +1,9 @@
 import Section from './components/Section';
 import SocialProfile from './components/SocialProfile';
+import Statistics from 'components/Statistics/Statistics';
 
 import user from './data/user.json';
+import uploadStats from './data/uploadStats.json';
 
 export default function App() {
   return (
@@ -14,6 +16,11 @@ export default function App() {
           avatar={user.avatar}
           stats={user.stats}
         />
+      </Section>
+
+      <Section title={"Task-2 'Statistics section'"}>
+        <Statistics title="Upload stats" stats={uploadStats} />
+        <Statistics stats={uploadStats} />
       </Section>
     </div>
   );
