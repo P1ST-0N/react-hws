@@ -1,9 +1,10 @@
 import Section from './components/Section';
 import SocialProfile from './components/SocialProfile';
 import Statistics from 'components/Statistics/Statistics';
-
+// import
 import user from './data/user.json';
 import uploadStats from './data/uploadStats.json';
+import friends from './data/friends.json';
 
 export default function App() {
   return (
@@ -21,6 +22,10 @@ export default function App() {
       <Section title={"Task-2 'Statistics section'"}>
         <Statistics title="Upload stats" stats={uploadStats} />
         <Statistics stats={uploadStats} />
+      </Section>
+
+      <Section title={"Task-3 'Friend list'"}>
+      {/* <FriendList friends={friends} /> */}
       </Section>
     </div>
   );
