@@ -31,8 +31,8 @@ export default function App() {
         <FriendList friends={friends} />
       </Section>
 
-      <Section>
-      <TransactionHistory items={transactions} />
+      <Section title={"Task-4 'Transaction history'"}>
+      <TransactionHistory transactions={transactions} />
       </Section>
     </div>
   );
