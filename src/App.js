@@ -2,7 +2,7 @@ import { useState } from "react";
 import Container from "./components/Container/Container";
 import Section from "./components/Section/Section";
 import Statistics from "./components/Statistics/Statistics";
-import Feedback from "./components/Feedback/Feedback";
+import FeedbackOptions from "./components/Feedback/FeedbackOptions";
 
 const App = () => {
   const [stats, setStats] = useState({
@@ -30,7 +30,7 @@ Math.round(((good * 100) / countTotalFeedback()) * 10) / 10;
   return (
     <Container>
       <Section title="Please leave feedback">
-        <Feedback
+        <FeedbackOptions
         options={Object.keys(stats)}
         onLeaveFeedback={handleIncrementStat}
         />
