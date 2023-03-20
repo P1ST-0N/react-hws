@@ -17,10 +17,13 @@ const App = () => {
   //   [textContent]: stats[textContent] + 1,
   // }));
 
-// const countTotalFeedback = () => {
-// const result = good + neutral + bad;
-// return result;
-// };
+const countTotalFeedback = () => {
+const result = good + neutral + bad;
+return result;
+};
+
+const countPositiveFeedbackPercentage = () =>
+Math.round(((good * 100) / countTotalFeedback()) * 10) / 10;
 
   return (
     <Container>
