@@ -1,4 +1,6 @@
 import { useState } from "react";
+import Container from "./components/Container/Container";
+import Section from "./components/Section/Section";
 
 const App = () => {
   const [stats, setStats] = useState({
@@ -7,13 +9,27 @@ const App = () => {
     bad: 0,
   });
 
-  // return (
-  //   <Container>
-  //     <Section>
-  //       <FeedbackOptions />
-  //     </Section>
-  //   </Container>
-  // );
+  const {good, neutral, bad} = stats;
+
+  // const handleIncrementStat = ({target: {textContent} }) => 
+  // setStats((prState) => ({
+  //   ...prState,
+  //   [textContent]: stats[textContent] + 1,
+  // }));
+
+// const countTotalFeedback = () => {
+// const result = good + neutral + bad;
+// return result;
+// };
+
+  return (
+    <Container>
+      <Section title="Please leave feedback">
+        <div>2143434sdgdsf</div>
+        {/* <FeedbackOptions /> */}
+      </Section>
+    </Container>
+  );
 };
 
 export default App;
