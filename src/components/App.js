@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { v4 as uuidv4 } from "uuid";
-// import ContactList from './ContactList';
+import ContactForm from "./ContactForm";
+
+import ContactList from './ContactList';
 
 export default class App extends Component {
   state = {
@@ -39,7 +41,7 @@ export default class App extends Component {
     return (
       <div>
   <h1>Phonebook</h1>
-  {/* <ContactForm ... /> */}
+  <ContactForm onAddContact={this.addContact} />
 
   <h2>Contacts</h2>
   {/* <Filter ... /> */}
