@@ -1,5 +1,6 @@
 import { Component } from "react";
 import { Searchbar } from "./Searchbar/Searchbar";
+import { apiRequest } from "./PixabayAPI/PixabayAPI";
 
 export class App extends Component {
   state = {
