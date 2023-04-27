@@ -1,6 +1,6 @@
 import { Component } from "react";
 import { Searchbar } from "./Searchbar/Searchbar";
-import { apiRequest } from "./PixabayAPI/PixabayAPI";
+import { apiRequest } from './PixabayAPI/PixabayAPI';
 import { ImageGallery } from "./ImageGallery/ImageGallery";
 
 export class App extends Component {
