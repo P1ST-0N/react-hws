@@ -1,6 +1,6 @@
 import { Component } from 'react'
 import css from './ImageGalleryItem.module.css'
-// import Modal
+import { Modal } from '../Modal/Modal';
 
 export class ImageGalleryItem extends Component {
   state = {
@@ -20,13 +20,13 @@ export class ImageGalleryItem extends Component {
           onClick={this.modalToggle}
           className={css.galleryItem}
         />
-        {/* {this.state.modalShow && (
+        {this.state.modalShow && (
           <Modal
             src={largeImageURL}
             alt={tags}
             modalToggle={this.modalToggle}
           />
-        )} */}
+        )}
       </li>
     )
   }
