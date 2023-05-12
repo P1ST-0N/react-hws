@@ -6,17 +6,17 @@ import css from './Home.module.css';
 
 const Home = () => {
     const [films, setFilms] = useState([]);
-
+  
     useEffect(() => {
-        getTrending().then(data => setFilms(data.results));
+      getTrending().then(data => setFilms(data.results));
     }, []);
-
+  
     return (
-        <>
+      <>
         <h1 className={css.title}>Trending today</h1>
         <HomeList films={films} />
-        </>
+      </>
     );
-};
-
-export default Home;
+  };
+  
+  export default Home;

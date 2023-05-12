@@ -7,12 +7,12 @@ export const HomeList = ({ films }) => {
 
   return (
     <List>
-      {films.map((film) => (
+      {films.map(film => (
         <Item key={film.id}>
           <Link
             to={`/movies/${film.id}`}
             state={{ from: location }}
-            style={{ textDecoration: "none" }}
+            style={{ textDecoration: 'none' }}
           >
             {film.poster_path ? (
               <Image
