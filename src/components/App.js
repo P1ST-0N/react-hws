@@ -4,6 +4,7 @@ import { Route, Routes } from "react-router-dom";
 
 const Layout = lazy(() => import('./Layout/Layout'));
 const Home = lazy(() => import('../pages/Home/Home'));
+const Movies = lazy(() => import('../pages/Movies/Movies'));
 
 export const App = () => {
   return (
@@ -11,7 +12,7 @@ export const App = () => {
       <Suspense fallback={<h2>Loading...</h2>}>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route />
+          <Route path="/movies" element={<Movies />} />
           <Route>
             <Route />
             <Route />
