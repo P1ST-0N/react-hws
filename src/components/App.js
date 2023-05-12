@@ -1,20 +1,21 @@
-import { Route, Routes } from "react-router";
+import { Route, Routes } from "react-router-dom";
 import { Lazy, Suspense } from "react";
+import Layout from "./Layout/Layout";
 
 export const App = () => {
   return (
-    <>
-    <Suspense fallback={<h2>Loading...</h2>}>
-      <Routes>
-        <Route />
-        <Route />
-        <Route>
+    <Layout>
+      <Suspense fallback={<h2>Loading...</h2>}>
+        <Routes>
           <Route />
           <Route />
-        </Route>
-        <Route />
-      </Routes>
-    </Suspense>
-    </>
+          <Route>
+            <Route />
+            <Route />
+          </Route>
+          <Route />
+        </Routes>
+      </Suspense>
+    </Layout>
   );
 };
