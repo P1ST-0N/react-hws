@@ -1,6 +1,5 @@
-import React from "react";
-import { useLocation, Link } from "react-router-dom"; /* react-router-dom*/
-import { Image, List, Item, Title, Text } from "./HomeList.styled";
+import { useLocation, Link } from 'react-router-dom';
+import { Image, List, Item, Title, Text } from './HomeList.styled';
 
 export const HomeList = ({ films }) => {
   const location = useLocation();

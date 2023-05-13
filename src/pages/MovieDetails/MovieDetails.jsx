@@ -1,19 +1,19 @@
-import { useState, useEffect, React } from "react";
-import { useLocation, useParams, Outlet, Link } from "react-router-dom";
-import nextId from "react-id-generator";
-import { getMovieDetails } from "../../components/API/API";
+import { useState, useEffect } from 'react';
+import { useLocation, useParams, Outlet, Link } from 'react-router-dom';
+import nextId from 'react-id-generator';
+import { getMovieDetails } from '../../components/API/API';
 
-import css from "./MovieDetails.module.css";
+import css from './MovieDetails.module.css';
 
 const MovieDetails = () => {
   const location = useLocation();
   const { movieId } = useParams();
   const [movie, setMovie] = useState(null);
 
-  const prevLocation = location.state?.from ?? "/";
+  const prevLocation = location.state?.from ?? '/';
 
   useEffect(() => {
-    getMovieDetails(movieId).then((data) => {
+    getMovieDetails(movieId).then(data => {
       setMovie(data);
     });
   }, [movieId]);
@@ -46,7 +46,7 @@ const MovieDetails = () => {
           <p key="runtime">Views: {movie.runtime}</p>
           <p key="data">Release data: {movie.release_date}</p>
           <h3 key="genres">Genres</h3>
-          {movie.genres.map((gen) => (
+          {movie.genres.map(gen => (
             <p key={nextId()}>{gen.name}</p>
           ))}
         </div>

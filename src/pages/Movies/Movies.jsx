@@ -1,40 +1,40 @@
-import { useState, useEffect, React } from "react";
-import { useSearchParams } from "react-router-dom";
-import { getSearchMovies } from "../../components/API/API";
-import { HomeList } from "../../components/HomeList/HomeList";
+import { useEffect, useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
+import { getSearchMovies } from '../../components/API/API';
+import { HomeList } from '../../components/HomeList/HomeList';
 import css from './Movies.module.css';
 
 const Movies = () => {
-    const [films, setFilms] = useState([]);
-    const [query, setQuery] = useState('');
-    const [queryParams, setQueryParams] = useSearchParams();
-    const searchQuery = queryParams.get('query') ?? '';
+  const [films, setFilms] = useState([]);
+  const [query, setQuery] = useState('');
+  const [queryParams, setQueryParams] = useSearchParams();
+  const searchQuery = queryParams.get('query') ?? '';
 
-    const handleChange = e => {
-        setQuery(e.target.value);
-    };
+  const handleChange = e => {
+    setQuery(e.target.value);
+  };
 
-    const handleSubmit = e => {
-        e.preventDefault();
-        if (!query) {
-            alert('Please enter movie');
-            return;
-        }
+  const handleSubmit = e => {
+    e.preventDefault();
+    if (!query) {
+      alert('Please enter movie');
+      return;
+    }
 
-        setQueryParams({ query });
-        getSearchMovies(query).then(res => setFilms(res.results));
-        setQuery('');
-    };
+    setQueryParams({ query });
+    getSearchMovies(query).then(res => setFilms(res.results));
+    setQuery('');
+  };
 
-    useEffect(() => {
-        if (searchQuery) {
-            getSearchMovies(searchQuery).then(res => setFilms(res.results));
-        }
-    }, [searchQuery]);
+  useEffect(() => {
+    if (searchQuery) {
+      getSearchMovies(searchQuery).then(res => setFilms(res.results));
+    }
+  }, [searchQuery]);
 
-    return (
-        <>
-        <form className={css.form} onSubmit={handleSubmit}>
+  return (
+    <>
+      <form className={css.form} onSubmit={handleSubmit}>
         <input
           className={css.input}
           type="text"
@@ -46,10 +46,10 @@ const Movies = () => {
           value={query}
         />
         <button className={css.button}>Find</button>
-        </form>
-        {films.length > 0 ? <HomeList films={films} /> : null}
-        </>
-    );
+      </form>
+      {films.length > 0 ? <HomeList films={films} /> : null}
+    </>
+  );
 };
 
 export default Movies;

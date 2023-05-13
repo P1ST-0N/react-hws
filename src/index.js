@@ -1,13 +1,13 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import { App } from './components/App';
 import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 
-// added unstable_
-ReactDOM.unstable_createRoot(document.getElementById('root')).render(
+// unstable_
+ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter basename="hw-05-movies">
+    <BrowserRouter>
       <App />
     </BrowserRouter>
   </React.StrictMode>

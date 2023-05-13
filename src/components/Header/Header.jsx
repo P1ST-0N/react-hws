@@ -1,9 +1,9 @@
-import React from "react";
-import { ItemMenu, Wrapper } from "./Header.styled";
+import React from 'react';
+import { ItemMenu, Wrapper } from './Header.styled';
 
 const navMenu = [
-  { href: "/", text: "Home" },
-  { href: "movies", text: "Movies" },
+  { href: '/', text: 'Home' },
+  { href: 'movies', text: 'Movies' },
 ];
 
 const Header = () => {
