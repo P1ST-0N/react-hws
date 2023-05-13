@@ -1,0 +1,48 @@
+.button {
+    padding: 10px;
+    margin-left: 20px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    width: 171px;
+    height: 45px;
+    font-size: 20px;
+    background-color: #d6d6d6;
+    border: 3px solid #ffaa9b;
+    border-radius: 7px;
+  }
+  
+  .image {
+    width: 400px;
+    height: 500px;
+  
+    margin-inline-start: 50px;
+    margin-top: 50px;
+  }
+  
+  .wrapper {
+    background: #fff5f1ba;
+    display: flex;
+  }
+  
+  .text_box {
+    margin: 50px;
+  }
+  
+  .list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .item {
+    margin-bottom: 10px;
+  }
+  .reviews {
+    width: 200px;
+    height: 53px;
+    border: 2px solid #ffaa9b;
+    border-radius: 7px;
+    cursor: pointer;
+    margin-right: 10px;
+    font-size: 20px;
+  }

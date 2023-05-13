@@ -5,6 +5,7 @@ import { Route, Routes } from "react-router-dom";
 const Layout = lazy(() => import('./Layout/Layout'));
 const Home = lazy(() => import('../pages/Home/Home'));
 const Movies = lazy(() => import('../pages/Movies/Movies'));
+const MovieDetails = lazy(() => import('../pages/MovieDetails/MovieDetails'));
 
 export const App = () => {
   return (
@@ -13,7 +14,7 @@ export const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/movies" element={<Movies />} />
-          <Route>
+          <Route path="/movies/:movieId" element={<MovieDetails />}>
             <Route />
             <Route />
           </Route>
